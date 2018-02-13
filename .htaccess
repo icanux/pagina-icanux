@@ -1,0 +1,17 @@
+#RewriteBase /
+RewriteEngine on
+
+RewriteRule ^registro registro.php
+RewriteRule ^iniciar iniciar.php
+RewriteRule ^contacto contacto.php
+RewriteRule ^agregar agregar.php
+RewriteRule ^usuarios usuarios.php  
+RewriteRule ^noticias noticias.php
+RewriteRule ^posts posts.php
+RewriteRule ^acuerdos acuerdos.php
+RewriteRule ^resultados resultados.php
+RewriteRule ^user/perfil user/perfil.php
+RewriteRule ^user/editar user/editar.php   
+RewriteRule ^perfil/(.+)/(.+) user/usuario.php?iduser=$1&nombre=$2
+RewriteRule ^post/(.+) verpost.php?seo=$1
+RewriteRule ^postt/(.+) veracuerdo.php?seo=$1
