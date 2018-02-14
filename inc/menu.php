@@ -23,30 +23,30 @@
 
 
 <?php if (isset($_SESSION['iduser'])) {?>
-			<li <?php if ($menu == 'acuerdos') {echo 'class="menu-activo"';
+						<li <?php if ($menu == 'acuerdos') {echo 'class="menu-activo"';
 	}
 
 	?>>
-		<a href="<?php echo $dato[0];?>acuerdos">acuerdos internos</a></li>
+					<a href="<?php echo $dato[0];?>acuerdos">acuerdos internos</a></li>
 
 	<?php }?>
 
 
 <?php if (isset($_SESSION['iduser'])) {?>
-		<li <?php if ($menu == 'usuarios') {echo 'class="menu-activo"';
+					<li <?php if ($menu == 'usuarios') {echo 'class="menu-activo"';
 	}
 
 	?>><a href="<?php echo $dato[0];?>usuarios">usuarios</a></li>
 	<?php }?>
 
 <?php if (isset($_SESSION['iduser'])) {?>
-	<li <?php if ($menu == 'agregar') {echo 'class="menu-activo"';
+				<li <?php if ($menu == 'agregar') {echo 'class="menu-activo"';
 	}
 
 	?>><a href="<?php echo $dato[0];?>agregar">Agregar</a></li>
 	<?php }?>
 <?php if (isset($_SESSION['iduser'])) {?>
-	<li <?php if ($menu == 'posts') {echo 'class="menu-activo"';
+				<li <?php if ($menu == 'posts') {echo 'class="menu-activo"';
 	}
 
 	?>><a href="<?php echo $dato[0];?>posts">todos los posts</a></li>
@@ -54,7 +54,7 @@
 
 
 <?php if (isset($_SESSION['iduser']) && rango($_SESSION['iduser']) == 10) {?>
-	<li <?php if ($menuadmin == 'admin') {echo 'class="menu-activo"';
+				<li <?php if ($menuadmin == 'admin') {echo 'class="menu-activo"';
 	}
 
 	?>><a href="<?php echo $dato[0];?>admin">Admin</a></li>

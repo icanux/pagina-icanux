@@ -1,5 +1,5 @@
   <?php require_once ('conexion.php');
-
+$menu = 'index';
 ?>
 <!DOCTYPE html>
 <html lang="en">

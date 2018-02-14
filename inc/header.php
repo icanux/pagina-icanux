@@ -1,8 +1,6 @@
 <?php
 
 include_once ('../conexion.php');
-
-$menu   = 'index';
 $iduser = $_SESSION['iduser'];
 //consultar datos del user
 $accion_perfil   = "SELECT * FROM users WHERE id=$iduser";
@@ -18,9 +16,9 @@ $cantidad_perfil = mysqli_num_rows($consulta_perfil);
 			<a href=" <?php echo $dato[0];?>">
 
 <?php if ($dato[4] != '') {?>
-																			<img  id="milogo"src="<?php echo $dato[0];?>img/<?php echo $dato[4];?>">
+																					<img  id="milogo"src="<?php echo $dato[0];?>img/<?php echo $dato[4];?>">
 	<?php } else {?>
-																			<img  id="milogo"src="<?php echo $dato[0];?>img/banner.png">
+																					<img  id="milogo"src="<?php echo $dato[0];?>img/banner.png">
 
 	<?php }?>
 </a>
@@ -29,17 +27,17 @@ $cantidad_perfil = mysqli_num_rows($consulta_perfil);
 
 
 <?php if (!isset($_SESSION['iduser'])) {?>
-																		<a href="<?php echo $dato[0];?>iniciar"  class=" boton boton-verde">Iniciar</a>
-																		<a href="<?php echo $dato[0];?>registro" class=" boton boton-rojo">Registrarse</a>
+																				<a href="<?php echo $dato[0];?>iniciar"  class=" boton boton-verde">Iniciar</a>
+																				<a href="<?php echo $dato[0];?>registro" class=" boton boton-rojo">Registrarse</a>
 	<?php } else {
 	?>
-																			<a href="<?php echo $dato[0];?>user/perfil"  class="">
+																					<a href="<?php echo $dato[0];?>user/perfil"  class="">
 
-													<img src="<?php echo $dato[0];?>user/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi">
-					<!-- <?php echo $_SESSION['nombreuser'];
+															<img src="<?php echo $dato[0];?>user/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi">
+							<!-- <?php echo $_SESSION['nombreuser'];
 	?> --></a>
-																				<a href="<?php echo $dato[0];?>inc/salir.php?cerrar=yes" class=" boton boton-salir">&times;
-																				</a>
+																						<a href="<?php echo $dato[0];?>inc/salir.php?cerrar=yes" class=" boton boton-salir">&times;
+																						</a>
 	<?php
 }
 ?>
