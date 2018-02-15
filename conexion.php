@@ -7,8 +7,8 @@ if (!isset($_SESSION)) {session_start();
 //CONEXIÓN A LA BASE DE DATOS
 $hostname_db = "localhost";
 $database_db = "icanux";
-$username_db = "elmersrl";
-$password_db = "971653834erl";
+$username_db = "root";
+$password_db = "";
 //Conectar a la base de datos
 $conexion = mysqli_connect($hostname_db, $username_db, $password_db);
 
