@@ -1,24 +1,33 @@
 <?php
+// Ya que ahora estamos ejecutando primero index.php, y luego este carga los
+// demás ficheros, la ruta de ejecución siempre será la del index.php.
+//
+// Elmer flojo, que tenía desactivado los errres, esto fallaba en las páginas
+// iniciales, por que estaba cargando el fichero de la carpeta padre. Pero
+// como tenía desactivado el error_log ...
+include_once ('conexion.php');
 
-include_once ('../conexion.php');
-$iduser = $_SESSION['iduser'];
-//consultar datos del user
-$accion_perfil   = "SELECT * FROM users WHERE id=$iduser";
-$consulta_perfil = mysqli_query($conexion, $accion_perfil);
-$datos_perfil    = mysqli_fetch_assoc($consulta_perfil);
-$cantidad_perfil = mysqli_num_rows($consulta_perfil);
+// Más flojera... si no existe $iduser, entonces no ejecutamos el query.
+$iduser = $_SESSION['iduser'] ?? null;
+if ($iduser) {
+	//consultar datos del user
+	$accion_perfil   = "SELECT * FROM users WHERE id=$iduser";
+	$consulta_perfil = mysqli_query($conexion, $accion_perfil);
+	$datos_perfil    = mysqli_fetch_assoc($consulta_perfil);
+	$cantidad_perfil = mysqli_num_rows($consulta_perfil);
+}
 ?>
 <header>
 	<div class="contenedor" style="border-color: aqua;">
 		<div class="logo izquierda">
 
 
-			<a href=" <?php echo $dato[0];?>">
+			<a href="">
 
 <?php if ($dato[4] != '') {?>
-																					<img  id="milogo"src="<?php echo $dato[0];?>img/<?php echo $dato[4];?>">
+																					<img  id="milogo"src="static/img/<?php echo $dato[4];?>">
 	<?php } else {?>
-																					<img  id="milogo"src="<?php echo $dato[0];?>img/banner.png">
+																					<img  id="milogo"src="static/img/banner.png">
 
 	<?php }?>
 </a>
@@ -27,16 +36,16 @@ $cantidad_perfil = mysqli_num_rows($consulta_perfil);
 
 
 <?php if (!isset($_SESSION['iduser'])) {?>
-																				<a href="<?php echo $dato[0];?>iniciar"  class=" boton boton-verde">Iniciar</a>
-																				<a href="<?php echo $dato[0];?>registro" class=" boton boton-rojo">Registrarse</a>
+																				<a href="iniciar"  class=" boton boton-verde">Iniciar</a>
+																				<a href="registro" class=" boton boton-rojo">Registrarse</a>
 	<?php } else {
 	?>
-																					<a href="<?php echo $dato[0];?>user/perfil"  class="">
+																					<a href="user/perfil"  class="">
 
-															<img src="<?php echo $dato[0];?>user/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi">
+															<img src="user/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi">
 							<!-- <?php echo $_SESSION['nombreuser'];
 	?> --></a>
-																						<a href="<?php echo $dato[0];?>inc/salir.php?cerrar=yes" class=" boton boton-salir">&times;
+																						<a href="inc/salir.php?cerrar=yes" class=" boton boton-salir">&times;
 																						</a>
 	<?php
 }

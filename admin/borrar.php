@@ -1,4 +1,4 @@
-<?php require_once ('../conexion.php');
+<?php require_once ('conexion.php');
 
 //validadcion de administrador
 if (!isset($_SESSION['iduser']) || rango($_SESSION['iduser']) != 10 || !isset($_GET['idpost'])) {header('location:'.$dato[0]);

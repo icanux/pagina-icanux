@@ -1,4 +1,4 @@
-<?php require_once ('../conexion.php');
+<?php require_once ('conexion.php');
 
 $menuadmin = 'usuarios';
 if (!isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
