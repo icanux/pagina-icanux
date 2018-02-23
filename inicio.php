@@ -1,4 +1,4 @@
-  <?php require_once ('conexion.php');
+<?php require_once ('conexion.php');
 $menu = 'index';
 ?>
 <!DOCTYPE html>
@@ -6,11 +6,11 @@ $menu = 'index';
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo $dato[2];?></title>
-  <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
+  <link rel="shorcut icon" type="image/x-icon" href="static/img/HELMI1.ico">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/style.css">
+	<link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta name="description" content="<?php echo strip_tags($dato[5]);?>">
@@ -28,7 +28,7 @@ $menu = 'index';
     <form  class="form">
           <div style="justify-content: center;display: flex;">
            <div class="icon-ii">
-           <img src="img/LOGO-ICANUX.png" style="width: 250px;"></div>
+           <img src="static/img/LOGO-ICANUX.png" style="width: 250px;"></div>
           </div>
 <br>
      <div>
@@ -194,9 +194,9 @@ hace que las libertades específicas sean adecuadas o no.</p>
           </div>
 
           <div class="columna columna-m-3 columna-g-3">
-              <img id="miimage" src="<?php echo $dato[0];?>img/HELMI2.png">
+              <img id="miimage" src="static/img/HELMI2.png">
               <br>
-              <img  id="miimage" src="<?php echo $dato[0];?>img/HELMI1.png">
+              <img  id="miimage" src="static/img/HELMI1.png">
               </div>
 
           </div>
@@ -207,8 +207,8 @@ hace que las libertades específicas sean adecuadas o no.</p>
 <?php include 'inc/footer.php';?>
 </div>
 
-  <script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="static/js/jquery-3.2.1.min.js"></script>
 
-  <script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
+  <script type="text/javascript" src="static/js/base.js"></script>
 </body>
 </html>

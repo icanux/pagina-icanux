@@ -10,7 +10,7 @@
 }
 
 ?>>
-			<a href="<?php echo $dato[0];?>">home</a></li>
+			<a href="">home</a></li>
 
 
 
@@ -18,7 +18,7 @@
 }
 
 ?>>
-		<a href="<?php echo $dato[0];?>noticias">noticias</a></li>
+		<a href="noticias">noticias</a></li>
 
 
 
@@ -27,7 +27,7 @@
 	}
 
 	?>>
-					<a href="<?php echo $dato[0];?>acuerdos">acuerdos internos</a></li>
+					<a href="acuerdos">acuerdos internos</a></li>
 
 	<?php }?>
 
@@ -36,20 +36,20 @@
 					<li <?php if ($menu == 'usuarios') {echo 'class="menu-activo"';
 	}
 
-	?>><a href="<?php echo $dato[0];?>usuarios">usuarios</a></li>
+	?>><a href="usuarios">usuarios</a></li>
 	<?php }?>
 
 <?php if (isset($_SESSION['iduser'])) {?>
 				<li <?php if ($menu == 'agregar') {echo 'class="menu-activo"';
 	}
 
-	?>><a href="<?php echo $dato[0];?>agregar">Agregar</a></li>
+	?>><a href="agregar">Agregar</a></li>
 	<?php }?>
 <?php if (isset($_SESSION['iduser'])) {?>
 				<li <?php if ($menu == 'posts') {echo 'class="menu-activo"';
 	}
 
-	?>><a href="<?php echo $dato[0];?>posts">todos los posts</a></li>
+	?>><a href="posts">todos los posts</a></li>
 	<?php }?>
 
 
@@ -57,7 +57,7 @@
 				<li <?php if ($menuadmin == 'admin') {echo 'class="menu-activo"';
 	}
 
-	?>><a href="<?php echo $dato[0];?>admin">Admin</a></li>
+	?>><a href="admin">Admin</a></li>
 	<?php }?>
 
 </ul>
