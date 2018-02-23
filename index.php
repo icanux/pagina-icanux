@@ -24,6 +24,12 @@ spl_autoload_register(function($class) {
     }
 });
 
+// Si existe el autoloader de composer, también lo cargamos
+$composer_autoloader = 'vendor/autoload.php';
+if (file_exists($composer_autoloader)) {
+    require_once $composer_autoloader;
+}
+
 $ruta = $_SERVER['REQUEST_URI'];
 
 // Si viene con un slash inicial, lo ignoramos. Uso las llaves, por un gusto
