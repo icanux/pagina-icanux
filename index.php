@@ -44,7 +44,7 @@ if (isset($_GET['_q'])) {
 // valor 'una/ruta'. Pero cuando usemos Nginx, modificaremos manualmente esta
 // variable para darle el valor correcto.
 } elseif (isset($_SERVER['PATH_INFO'])) {
-    $ruta = $_SERVER['PATH_INFO']
+    $ruta = $_SERVER['PATH_INFO'];
 
 // Tercero. Puede venir por REQUEST_URI. Esta variable tiene la ruta completa
 // de la petición. Útil cuando la aplicación está en la raiz de la web. Lo
@@ -64,8 +64,22 @@ if (isset($_GET['_q'])) {
 //
 // Pero la forma que preferí es más legible :-)
 
+## BEGIN HACK
+
+// Usando el .htaccess, cuando solicitas la raiz del proyecto, Apache modifica
+// la URL añadiendole el DocumentoRoot, en este caso 'index.php', que es pasado
+// a este script.
+//
+// Aun no sé como evitar ese comportamiento. Mientras tanto, lo removemos aquí.
+// Un hack feo, solo para que todo funcione :-P
+if ($ruta == 'index.php') {
+    $ruta = '';
+}
+
+## END HACK
+
 // Removemos los slashs iniciales y finales
-$ruta = trim($rutal, '/');
+$ruta = trim($ruta, '/');
 
 // La carpeta 'static' es especial: Es servida directo por el servidor web, sin
 // pasar por este script. Para que eso funcione en el servidor de desarrollo de

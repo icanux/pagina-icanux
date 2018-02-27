@@ -6,4 +6,7 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !static/ [NC]
 
 # Todas las demás URLs las enviamos como parámetro al index.php.
+# TODO: Al hacer un match con la raiz del proyecto, $1 == 'index.php', que tiene
+# un hack feo en el index.php para eliminarlo. Debe haber una forma de procesar
+la URL _antes_ de la redirección hecha por Apache.
 RewriteRule ^(.+)$ index.php?_q=$1 [L,QSA]
