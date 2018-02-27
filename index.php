@@ -30,26 +30,55 @@ if (file_exists($composer_autoloader)) {
     require_once $composer_autoloader;
 }
 
-$ruta = $_SERVER['REQUEST_URI'];
+// La ruta a la aplicación, que es básicamente la URL (o URI), la obtenemos de
+// 3 lugares:
 
-// Si viene con un slash inicial, lo ignoramos. Uso las llaves, por un gusto
-// personal :-) Da igual usar corchetes, pero uso llaves cuando quiero acceder
-// a un caracter en un string.
-if ($ruta{0} == '/') {
-    $ruta = substr($ruta, 1);
+// Primero. Puede venir por la variable GET '_q'. Esto es usado por Apache via
+// .htaccess
+if (isset($_GET['_q'])) {
+    $ruta = $_GET['_q'];
+
+// Segundo. Puede venir por la variable de entorno PATH_INFO. Esta variable
+// debería contener una ruta que sigue a un fichero existente. E.g.
+// http://localhost/script.php/una/ruta . En este caso, PATH_INFO tendría como
+// valor 'una/ruta'. Pero cuando usemos Nginx, modificaremos manualmente esta
+// variable para darle el valor correcto.
+} elseif (isset($_SERVER['PATH_INFO'])) {
+    $ruta = $_SERVER['PATH_INFO']
+
+// Tercero. Puede venir por REQUEST_URI. Esta variable tiene la ruta completa
+// de la petición. Útil cuando la aplicación está en la raiz de la web. Lo
+// usaremos principalmente para el servidor web de desarrollo de PHP
+} elseif (isset($_SERVER['REQUEST_URI'])) {
+    $ruta = $_SERVER['REQUEST_URI'];
+
+// Si no hay nada de esto, pucha... no tengo idea qué hacer :')
+} else {
+    throw new Exception ('OMG NO PUDE UBICAR LA RUTA!!!!');
+    exit;
 }
+
+// N.b.: Todas estas líneas las pudimos condensar en una:
+//
+// $ruta = $_GET['_q'] ?? $_SERVER['PATH_INFO'] ?? $_SERVER['REQUEST_URI'] ?? null;
+//
+// Pero la forma que preferí es más legible :-)
+
+// Removemos los slashs iniciales y finales
+$ruta = trim($rutal, '/');
 
 // La carpeta 'static' es especial: Es servida directo por el servidor web, sin
 // pasar por este script. Para que eso funcione en el servidor de desarrollo de
 // PHP, tenemos que retornar false. Para los demás, jamás debería de llegar
 // a este if.
 if (substr($ruta, 0, 7) == 'static/') {
-
     return false;
 }
 
+// Iniciamos la clase de Ruteo
 $ruteador = new Ruteo($ruta);
 
+// Obtenemos el script y los parámetros que obtuvo.
 $controlador = $ruteador->obtenerControlador();
 $parámetros = $ruteador->obtenerParámetros();
 
@@ -57,5 +86,6 @@ $parámetros = $ruteador->obtenerParámetros();
 if (file_exists($controlador)) {
     require $controlador;
 } else {
+    // O mostramos un 404 si no encontró nada.
     require '404.php';
 }
