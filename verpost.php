@@ -31,14 +31,14 @@ $cantidad = count($partes);
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo $datos_post['title'];?></title>
-	<link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/style.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>slider/responsiveslides.css">
-	<script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="<?php echo $dato[0];?>slider/responsiveslides.min.js"></script>
-	<script type="text/javascript" src="<?php echo $dato[0];?>ckeditor/ckeditor.js" ></script>
+	<link rel="shorcut icon" type="image/x-icon" href="img/HELMI1.ico">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="slider/responsiveslides.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="slider/responsiveslides.min.js"></script>
+	<script type="text/javascript" src="ckeditor/ckeditor.js" ></script>
 
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -87,11 +87,11 @@ $cantidad = count($partes);
 											<div class="alerta">
 												<br>
 	<?php if (isset($_SESSION['iduser']) && rango($_SESSION['iduser']) == 10) {?>
-																	<a onclick="return confirm('seguro que desea eliminar?');" href=" <?php echo $dato[0];?>/admin/borrar.php?idpost=<?php echo $datos_post['id'];?>"   class="boton boton-rojo derecha">borrar</a>
+																	<a onclick="return confirm('seguro que desea eliminar?');" href=" /admin/borrar.php?idpost=<?php echo $datos_post['id'];?>"   class="boton boton-rojo derecha">borrar</a>
 																	<a href="" class="boton boton-verde derecha">editar</a>
 		<?php }?>
 											</div>
-											autor del post <a href="<?php echo $dato[0];?>perfil/<?php echo $datos_post['autor'];?>/<?php echo nombre($datos_post['autor']);?>"><?php echo nombre($datos_post['autor']);
+											autor del post <a href="perfil/<?php echo $datos_post['autor'];?>/<?php echo nombre($datos_post['autor']);?>"><?php echo nombre($datos_post['autor']);
 	?></a>
 											<br>
 											<br>
@@ -105,11 +105,11 @@ $cantidad = count($partes);
 	<?php } else {?>
 	<div class="">
 	<?php if (rango($_SESSION['iduser']) == 10) {?>
-																	<a onclick="return confirm('seguro que desea eliminar?');" href="<?php echo $dato[0];?>/admin/borrar.php?idpost=<?php echo $datos_post['id'];?>"   class="boton boton-rojo derecha">borrar</a>
-																	<a href="<?php echo $dato[0];?>/admin/editar.php?idpost=<?php echo $datos_post['id'];?>" class="boton boton-verde derecha">editar</a>
+																	<a onclick="return confirm('seguro que desea eliminar?');" href="/admin/borrar.php?idpost=<?php echo $datos_post['id'];?>"   class="boton boton-rojo derecha">borrar</a>
+																	<a href="/admin/editar.php?idpost=<?php echo $datos_post['id'];?>" class="boton boton-verde derecha">editar</a>
 		<?php }?>
 											</div>
-											autor del post <a href="<?php echo $dato[0];?>perfil/<?php echo $datos_post['autor'];?>/<?php echo nombre($datos_post['autor']);?>"><?php echo nombre($datos_post['autor']);
+											autor del post <a href="perfil/<?php echo $datos_post['autor'];?>/<?php echo nombre($datos_post['autor']);?>"><?php echo nombre($datos_post['autor']);
 	?></a>
 											<br> <br>
 
@@ -161,7 +161,7 @@ $cantidad = count($partes);
 		<div class="fila">
 		<?php if ($datos_comen['autor'] == $_SESSION['iduser']) {?>
 																									<div class="columna columna-m-2 columna-g-2">
-																										<a href="<?php echo $dato[0];?>perfil/<?php echo $datos_post['autor'];?>/<?php echo nombre($datos_post['autor']);?>"  style="background-color:black; border-color: aqua; color: aqua; border-radius: 30px; "">
+																										<a href="perfil/<?php echo $datos_post['autor'];?>/<?php echo nombre($datos_post['autor']);?>"  style="background-color:black; border-color: aqua; color: aqua; border-radius: 30px; "">
 																											<h3><?php echo nombre($datos_comen['autor']);
 			?></h3></a>
 																											</div>
@@ -176,7 +176,7 @@ $cantidad = count($partes);
 
 
 																												<div class="columna columna-m-2 columna-g-2" >
-																												<a href="<?php echo $dato[0];?>perfil/<?php echo $datos_post['autor'];?>/<?php echo nombre($datos_post['autor']);?>" style="background-color:black; border-color: aqua; color: aqua; border-radius: 3px;">
+																												<a href="perfil/<?php echo $datos_post['autor'];?>/<?php echo nombre($datos_post['autor']);?>" style="background-color:black; border-color: aqua; color: aqua; border-radius: 3px;">
 																														<h3><?php echo nombre($datos_comen['autor']);
 			?></h3></a>
 																														</div>
@@ -239,8 +239,8 @@ $cantidad = count($partes);
 
 												})  ;
 											</script>
-											<script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
-											<script type="text/javascript" src="<?php echo $dato[0];?>/js/efectos.js"></script>
+											<script type="text/javascript" src="js/base.js"></script>
+											<script type="text/javascript" src="/js/efectos.js"></script>
 										</body>
 										</html>
 

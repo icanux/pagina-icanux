@@ -31,10 +31,10 @@ $cantidad_post = mysqli_num_rows($consulta_post);
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo $dato_post['title'];?></title>
-	<link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/style.css">
+	<link rel="shorcut icon" type="image/x-icon" href="img/HELMI1.ico">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
@@ -75,14 +75,14 @@ if ($cantidad_post != 0) {
 																	<div class="columna columna-m-3 columna-g-3">
 
 		<?php if ($imagenes != '') {?>
-																						<img src=" <?php echo $dato[0];?>img/upload/<?php echo $partes[0];?>">
+																						<img src=" img/upload/<?php echo $partes[0];?>">
 			<?php } else {?>
-																						<img src="<?php echo $dato[0];?>img/HELMI1.png">
+																						<img src="img/HELMI1.png">
 			<?php }?>
 
 																	</div>
 																	<div class="columna columna-m-9 columna-g-9">
-																		<h1><a href=" <?php echo $dato[0];?>post/<?php echo $datos_post['seo'];?> " style="color: aqua;"><?php echo $datos_post['title'];
+																		<h1><a href=" post/<?php echo $datos_post['seo'];?> " style="color: aqua;"><?php echo $datos_post['title'];
 		?></a> </h1>
 		<?php echo substr(strip_tags($datos_post['content']), 0, 1000);?><br><br>
 																			<div class="etiqueta etiqueta-pequenia" style="background-color: black; border-color:orange;">
@@ -131,8 +131,8 @@ if ($cantidad_post != 0) {
 
 
 
-				<script src="<?php echo $dato[0];?>js/base.js"></script>
-				<script src="<?php echo $dato[0];?>js/efectos.js"></script>
+				<script src="js/base.js"></script>
+				<script src="js/efectos.js"></script>
 			</body>
 			</html>
 <?php mysqli_free_result($consulta_post);?>
