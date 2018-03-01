@@ -7,7 +7,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here.
 	// For complete reference see:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
-	config.uiColor = '#00f3ff';
+	config.uiColor =  '#ff0000';
 	config.entities_latin = false;
 	config.disableNativeSpellChecker = false;
 	config.enterMode = CKEDITOR.ENTER_BR;

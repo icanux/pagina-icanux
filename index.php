@@ -1,40 +1,34 @@
-  <?php require_once ('conexion.php');
+<?php require_once ('conexion.php');
 $menu = 'index';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title><?php echo $dato[2];?></title>
-  <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/style.css">
-
+  <meta charset="UTF-8">
+  <title>Icanux</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta name="description" content="<?php echo strip_tags($dato[5]);?>">
-  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="img/HELMI1.ico">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/my-style.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
 </head>
-<body>
-
-<?php include 'inc/header.php';?>
-
-<?php include 'inc/menu.php';?>
-<div class="cabecera" id="f-i"  style="">
-  <div class="contenedor" style="padding: 20px;">
-
-
+<body class="body">
+<?php require_once ('inc/header.php');?>
+<div class="cabecera" id="f-i">
+  <div class="main-content ed-container main-center">
     <form  class="form">
-          <div style="justify-content: center;display: flex;">
+          <div class="main-center">
            <div class="icon-ii">
            <img src="img/LOGO-ICANUX.png" style="width: 250px;"></div>
           </div>
 <br>
      <div>
 <div class="" style="justify-content: center;display: flex;">
-<div class="cont" style="width: 50%;text-align: center;">
+<div class="cont">
+  <p>
   La Comunidad de Software Libre Icanux es una comunidad formada inicialmente por estudiantes de Facultad de Sistemas de la Universidad Nacional "San Luis Gonzaga" de Ica, pero abierta a toda la comunidad iqueña interesada en proyectos FOSS.
+  </p>
 </div>
 </div>
 
@@ -42,68 +36,134 @@ $menu = 'index';
 </div>
 <br><br>
     </form>
-
-
-  <div class="fila" style="color: silver;margin-top: 50px;text-align: center;" >
-
-
-
-
-    <div class="columna columna-m-4 columna-g-4">
-    <div class="centrar" style="justify-content: center;">
-
-
-
-     <div class="icon-i"> <i class="fa fa-laptop" aria-hidden="true" id="icono"></i></div>
-
-    </div>
-    <div class="title">
-      Mision
-    </div>
-    <br>
-     Promover el Software Libre y soberanía tecnológica
-    </div>
-    <div class="columna columna-m-4 columna-g-4">
-    <div class="centrar" style="justify-content: center;">
-      <div class="icon-i"><i class="fa fa-rocket" aria-hidden="true" id="icono"></i></div>
-    </div>
-    <div class="title">
-      Visión
-    </div>
-    <br>
-   Tener conocimientos avanzados sobre tecnologías libres y poder realizar aportes
-    </div>
-    <div class="columna columna-m-4 columna-g-4">
-    <div class="centrar" style="justify-content: center;">
-      <div class="icon-i"><i class="fa fa-heart" aria-hidden="true" id="icono"></i></div>
-    </div>
-    <div class="title">
-      Objetivos
-    </div>
-    <br>
-    LapresentepropuestabuscacomoprincipalobjetivoelcambiodeimageninstitucionalsisepuededecirdelacomunidaddesoftwarelibreICANUX.Semostraranacontinuaciónunaseriedeimágenesconceptualesdeloqueseplaneaseaconsideradocomopropuesta
-    </div>
-  </div>
- <br><br><br><br>
-
-  </div>
 </div>
-<div class="contenedor fondo-blanco relleno-8 borde-negro">
-      <div class="fila">
-          <div class="columna columna-m-9 columna-g-9">
 
-<h2>¿Qué es el software libre?</h2>
+
+
+<div class="ed-container main-center centrar">
+
+  <aside class="ed-item l-1-3 m-1-3">
+      <div class="sidebar-block">
+      <div>
+        <a href="">
+        <div class="ed-container item-redes">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+        </a>
+      </div>
+      </div>
+
+    </aside>
+    <aside class="ed-item l-1-3 m-1-3">
+      <div class="sidebar-block">
+      <div>
+        <a href="">
+        <div class="ed-container item-redes">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+        </a>
+      </div>
+      </div>
+    </aside>
+    <aside class="ed-item l-1-3 m-1-3">
+      <div class="sidebar-block">
+      <div>
+        <a href="">
+        <div class="ed-container item-redes">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </div>
+        </a>
+      </div>
+      </div>
+    </aside>
+  </div>
+
+
+</div>
+
+<div class="main-content" style="background:white">
+<div class="ed-container main-center centrar">
+
+  <aside class="ed-item l-1-3 m-1-3">
+      <div class="sidebar-block">
+      <div style="height: 180px;">
+        <div class="item-fa ed-container ed-fa">
+          <i class="fa fa-laptop" aria-hidden="true"></i>
+        </div>
+      </div>
+        <div class="main-title">
+          <h2 class="sidebar-block__title">Misión</h2>
+        </div>
+        <div class="mision">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </div>
+      </div>
+
+    </aside>
+    <aside class="ed-item l-1-3 m-1-3">
+      <div class="sidebar-block">
+      <div style="height: 180px;">
+
+
+        <div class="item-fa ed-container ed-fa">
+          <i class="fa fa-rocket" aria-hidden="true"></i>
+        </div>
+      </div>
+        <div class="main-title"><h2 class="sidebar-block__title">Visión</h2></div>
+        <div class="vision">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </div>
+      </div>
+    </aside>
+    <aside class="ed-item l-1-3 m-1-3">
+      <div class="sidebar-block">
+      <div style="height: 180px;">
+        <div class="item-fa ed-container ed-fa">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+        </div>
+      </div>
+        <div class="main-title"><h2 class="sidebar-block__title">Objetivos</h2></div>
+        <div class="valores">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </div>
+      </div>
+    </aside>
+  </div>
+  </div>
+
+  <div class="main-content software" >
+    <div class="ed-container">
+      <dib class="ed-item m-50 l-50">
+        <h2>¿Qué es el software libre?</h2>
 
 <blockquote ><p>
 ¿Tiene alguna pregunta acerca de las licencias de software libre que no esté
-respondida aquí? Consulte nuestra otra <a
-href="http://www.fsf.org/licensing">información sobre licencias</a>, y si es
+respondida aquí? Consulte nuestra otra <a href="http://www.fsf.org/licensing">información sobre licencias</a>, y si es
 necesario contacte con el Compliance Lab de la FSF en <a
 href="mailto:licensing@fsf.org">licensing@fsf.org</a>.</p>
 </blockquote>
 
-<h3>Definición de software libre</h3>
+      </dib>
+      <dib class="ed-item m-50 l-50">
+        <img src="img/images.png">
+      </dib>
+    </div>
+  </div>
 
+  <div class="main-content" style="background: white;">
+    <div class="ed-container">
+      <div class="ed-item full full">
+        <div class="div-software-libre">
+<h3>Definición de software libre</h3>
 <blockquote>
 <p>
 La definición de software libre estipula los criterios que se tienen que
@@ -114,6 +174,8 @@ href="#History">Historial</a>, se puede consultar la lista de modificaciones
 que afectan la definición de software libre.
 </p>
 </blockquote>
+
+
 
 <p>
 «Software libre» es el software que respeta la libertad de los usuarios y la
@@ -137,29 +199,73 @@ programador controla el programa, con lo cual el programa resulta ser <a
 href="/philosophy/free-software-even-more-important.html">un instrumento de
 poder injusto</a>.
 </p>
+</div>
+</div>
+</div>
+</div>
 
-<h4> Las cuatro libertades esenciales</h4>
 
-<p>
+<div class="libertad">
+    <div class="ed-libertades">
+    <h4> Las cuatro libertades esenciales</h4>
+    </div>
+</div>
+
+ <div class="main-content" style="background: white;">
+    <div class="ed-container">
+      <div class="ed-item full full">
+        <div class="div-software-libre">
+<div class="centrar">
+<h2>
 Un programa es software libre si los usuarios tienen las cuatro libertades
 esenciales:
-</p>
+</h2>
+</div>
 
-<ul>
-  <li>La libertad de ejecutar el programa como se desea, con cualquier propósito
-(libertad 0).</li>
-  <li>La libertad de estudiar cómo funciona el programa, y cambiarlo para que haga
+<div class="ed-container">
+<div class="ed-item m-50 l-50 item-libertades">
+<div class="ed-item-libertad">
+<div class="item-libertad__icon center">
+  <i class="fa fa-heart"></i>
+  <small>0</small>
+</div>
+</div>
+<p>La libertad de ejecutar el programa como se desea, con cualquier propósito
+(libertad 0).</p>
+</div>
+<div class="ed-item m-50 l-50 item-libertades">
+<div class="ed-item-libertad">
+<div class="item-libertad__icon center">
+  <i class="fa fa-heart"></i>
+  <small>1</small>
+</div>
+</div>
+<p>La libertad de estudiar cómo funciona el programa, y cambiarlo para que haga
 lo que usted quiera (libertad 1). El acceso al código fuente es una
-condición necesaria para ello.
-  </li>
-  <li>La libertad de redistribuir copias para ayudar a su prójimo (libertad 2).
-  </li>
-  <li>La libertad de distribuir copias de sus versiones modificadas a terceros
+condición necesaria para ello.</p>
+</div>
+<div class="ed-item m-50 l-50 item-libertades">
+<div class="ed-item-libertad">
+<div class="item-libertad__icon center">
+  <i class="fa fa-heart"></i>
+  <small>2</small>
+</div>
+</div>
+<p>La libertad de redistribuir copias para ayudar a su prójimo (libertad 2).</p>
+</div>
+<div class="ed-item m-50 l-50 item-libertades">
+<div class="ed-item-libertad">
+<div class="item-libertad__icon center">
+  <i class="fa fa-heart"></i>
+  <small>3</small>
+</div>
+</div>
+<p>La libertad de distribuir copias de sus versiones modificadas a terceros
 (libertad 3). Esto le permite ofrecer a toda la comunidad la oportunidad de
 beneficiarse de las modificaciones. El acceso al código fuente es una
-condición necesaria para ello.
-  </li>
-</ul>
+condición necesaria para ello.</p>
+</div>
+</div>
 
 <p>
 Un programa es software libre si otorga a los usuarios todas estas
@@ -189,26 +295,62 @@ href="/philosophy/selling.html">vender copias</a>.
 
 <p>En el resto de esta página tratamos algunos puntos que aclaran qué es lo que
 hace que las libertades específicas sean adecuadas o no.</p>
-
-
-          </div>
-
-          <div class="columna columna-m-3 columna-g-3">
-              <img id="miimage" src="<?php echo $dato[0];?>img/HELMI2.png">
-              <br>
-              <img  id="miimage" src="<?php echo $dato[0];?>img/HELMI1.png">
-              </div>
-
-          </div>
+        </div>
       </div>
-   </div>
-<center>
-  <div>
-<?php include 'inc/footer.php';?>
+      <div class="ed-item full main-center">
+      <img src="img/HELMI2.png">
+      <br>
+      <img src="img/HELMI1.png">
+      </div>
+    </div>
+  </div>
+
+
+<div  class="main-contact" id="contactanos">
+  <div class="ed-container ed-container-contact">
+      <div class="ed-item l-100 m-100 contactanos">
+        <form class="ed-formulario">
+        <div class="ed-container">
+            <div class="ed-item l-50">
+              <div>
+                <label>Nombres</label>
+              </div>
+              <input class="form-team" id="nombres" name="nombres" type="text" value="">
+              <div>
+                <label>E-mail</label>
+              </div>
+              <input class="form-team" id="email" name="email" type="email" value="">
+
+              <div>
+                <label>Telefono</label>
+              </div>
+              <input class="form-team" id="telefono" name="telefono" type="text">
+            </div>
+            <div class="ed-item l-50">
+                  <label>Mensaje</label>
+                  <br>
+                  <textarea class="textarea" id="comentario" name="comentario"></textarea>
+              </div>
+            </div>
+          <br>
+          <div class="ed-container">
+            <div class="ed-item l-100" style="text-align: center;">
+              <input type="submit"  class="button button-enviar">
+            </div>
+          </div>
+
+          <br>
+        </form>
+      </div>
+    </div>
+    <br>
 </div>
 
-  <script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
+<?php require_once ('inc/footer.php');?>
 
-  <script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
-</body>
-</html>
+      <script src="js/ed-grid.js"></script>
+      <script type="text/javascript">
+        edgrid.menu('nav','menu');
+      </script>
+    </body>
+    </html>

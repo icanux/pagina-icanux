@@ -48,31 +48,23 @@ if (isset($_FILES['logo'])) {
  <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/style.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/styles.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/my-style.css">
 <script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
-<body class="fondo-oscuro">
-
-
+<body>
 <?php include ('../inc/header.php');?>
+<div class="main-content">
 
-<?php include ('../inc/menu.php');?>
-<div class="contenedor fondo-blanco relleno-8 borde-gris" style="min-height: 600px">
+	<div class="ed-container">
 
-
-
-	<!--Cada fila contiene 12 columnas 12 es igual a 100% -->
-	<div class="fila">
-
-
-
-<div class="columna columna-m-3 columna-g-3">
+<div class="ed-item m-25 l-25">
 <?php include ('sidebar.php');?>
 </div>
 
 
-	<div class="columna columna-m-9 columna-g-9">
+	<div class="ed-item m-75 l-75">
 		<h1>Editar logo</h1>
 
 
@@ -80,28 +72,28 @@ if (isset($_FILES['logo'])) {
 		<form enctype="multipart/form-data" onsubmit="return validar_logo(logo.value);" action="" method="post" class="formulario" id="formAgregar" style="max-width: 600px">
 
 
-<div class="formulario-grupo">
+<div class="form-team">
 
-<div class="alerta" style="border-color: aqua;">
+<div class="alerta" style="border-color: tomato;">
 
 <?php if ($dato[4] != '') {?>
-				<img  id="milogo"src="<?php echo $dato[0];?>img/<?php echo $dato[4];?>">
+													<img  id="milogo"src="<?php echo $dato[0];?>img/<?php echo $dato[4];?>">
 	<?php } else {?>
-				<img  id="milogo"src="<?php echo $dato[0];?>img/banner.png">
+													<img  id="milogo"src="<?php echo $dato[0];?>img/banner.png">
 
 	<?php }?></div>
 <label for="logo">logo</label>
-				<input type="file" name="logo" id="logo" style="background-color: aqua;">
+				<input type="file" name="logo" id="logo">
 			</div>
 
 
-			<div class="formulario-grupo oculto" id="datosweb-error">
+			<div class="form-team oculto" id="datosweb-error">
 				<div class="alerta alerta-rojo alerta-pequenia" id="datosweb-mensaje">Error</div>
 			</div>
 
 
-			<div class="formulario-grupo">
-				<input type="submit" value="Editar" class="boton boton-agregar derecha">
+			<div class="form-team">
+				<input type="submit" value="Editar" class="button button-enviar derecha">
 			</div>
 
 
@@ -131,8 +123,8 @@ if (isset($_FILES['logo'])) {
 
 
 
-	<script src="<?php echo $dato[0];?>js/base.js"></script>
-	<script src="<?php echo $dato[0];?>js/efectos.js"></script>
+		<script src="<?php echo $dato[0];?>js/base.js"></script>
+		<script src="<?php echo $dato[0];?>js/efectos.js"></script>
 </body>
 </html>
 <?php mysqli_free_result($consulta_editar);?>

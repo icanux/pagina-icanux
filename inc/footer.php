@@ -1,38 +1,22 @@
-<div class="">
-      <footer>
-        Desarrollado por Elmer Ramos Loayza
-        </footer>
-      </div>
-<footer>
-              <div  id="footer">
-                <div id="informacion">
-                  <div class="fila contenedor" style="text-align: center;">
-                    <div class="columna columna-m-3 columna-g-3">
+<footer class="main-footer">
+      <div class="main-content ed-container">
+        <div class="ed-item l-1-3 m-1-3">
+          <h1>Icanux</h1>
 
-<div><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 6em; border-radius: 5px ; color: #a22f16;"></i>  </div>
+          Comunidad de software libre
+        </div>
+        <div class="ed-item l-1-3 m-1-3">
+          <h1>Redes  Sociales</h1>
+          <div><a href="">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></div>
+            <div><i class="fa fa-whatsapp" aria-hidden="true"></i>twiter</div>
+          </div>
+          <div class="ed-item l-1-3 m-1-3">
+            <img src="<?php echo $dato[0];?>img/HELMI1.png" class="logo-footer" alt="" style="width: 130px;margin-top: 0">
+          </div>
 
-                    </div>
-                    <div class="columna columna-m-3 columna-g-3" style="text-align: center">
-                      <div><i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 6em; border-radius: 5px ; color: #a22f16;"></i> </div>
-
-
-                    </div>
-                    <div class="columna columna-m-3 columna-g-3">
-
-
-                      <div><a href="">
-                        <i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 6em; border-radius: 5px ; color: #a22f16;"></i>  </a></div>
-
-
-                      </div>
-
-                      <div class="columna columna-m-3 columna-g-3">
-
-                      <img src="<?php echo $dato[0];?>img/HELMI1.png" alt="" style="width: 100px;">
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </footer>
-              <div class="subir subir-negro"></div>
+          <div class="ed-item m-100 l-100">
+           <p> Desarrollado por Elmer Ramos Loayza  - todos los derechos reservados &copy; Copyright <?php echo date('Y');?></p>
+          </div>
+        </div>
+      </footer>

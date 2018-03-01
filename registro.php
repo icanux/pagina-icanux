@@ -15,69 +15,68 @@ if (isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body class="fondo-oscuro">
 <?php include 'inc/header.php';?>
-
-<?php include 'inc/menu.php';?>
-<div class="contenedor fondo-gris" style="min-height: 600px;">
-      <div class="fila">
-          <div class="columna columna-m-12 columna-g-12">
+<div ed-container>
+      <div class="e-content">
+          <div class="ed-item m-100 l-100">
 
     <center>
            <h1>FORMULARIO DE REGISTRO </h1>
 
 
-           <form onsubmit="return false" class="formulario" id="formRegistro" style="max-width: 400px;">
+           <form onsubmit="return false" class="formulario form-registro" id="formRegistro" style="max-width: 400px;">
 
-                        <div class="formulario-grupo">
+                        <div class="form-team-grupo">
                               <label for="nam">Nombre:</label>
                               <input  type="text" name="nam" id="nam" placeholder="Nombre...">
                         </div>
-                        <div class="formulario-grupo">
+                        <div class="form-team">
                               <label for="ap">Apellidos:</label>
                               <input type="text" name="ap" id="ap" placeholder="Apellidos...">
                         </div>
 
-                        <div class="formulario-grupo">
+                        <div class="form-team">
                               <label for="user">Usuario:</label>
-                              <input type="text" name="user" id="user" class="nombre" placeholder="Nombre de usuario..." style="background-color: white;">
+                              <input type="text" name="user" id="user" class="nombre" placeholder="Nombre de usuario...">
                         </div>
 
-                         <div class="formulario-grupo">
+                         <div class="form-team">
                               <label for="correo">Email:</label>
                               <input type="email" name="correo" id="correo" placeholder="Ejemplo@icanux.com">
                         </div>
 
-                         <div class="formulario-grupo">
+                         <div class="form-team">
                               <label for="pass1">Contraseña:</label>
                               <input type="password" name="pass1" id="pass1" placeholder="">
                         </div>
 
-                         <div class="formulario-grupo">
+                         <div class="form-team">
                               <label for="pass2">Repetir contraseña:</label>
                               <input type="password" name="pass2" id="pass2" placeholder="">
                         </div>
-                         <div class="formulario-grupo">
+                         <div class="form-team">
                               <label for="num">telefono:</label>
-                              <input type="text" name="num" id="num" placeholder="">
+                              <input type="text" name="num" id="num" placeholder="056+.....">
                         </div>
 
 
 
-                        <div class="formulario-grupo oculto" id="registro-error">
+                        <div class="form-team oculto" id="registro-error">
                           <div id="registro-mensaje" class="alerta alerta-rojo alerta-pequenia" >Error</div>
                         </div>
-
-                        <div class="formulario-grupo">
-                            <input type="submit"  class="boton boton-agregar derecha" value="registrar" onclick="registro(nam.value, ap.value,user.value,correo.value,pass1.value,pass2.value,num.value);">
+               <br>
+                        <div class="form-team">
+                            <input type="submit"  class="button button-enviar" value="registrar" onclick="registro(nam.value, ap.value,user.value,correo.value,pass1.value,pass2.value,num.value);">
                         </div>
 
                     </form>
+        <br>
 
 
 
@@ -94,7 +93,10 @@ if (isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
 
 
   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/base.js"></script>
+  <script type="text/javascript" src="js/ed-grid.js"></script>
   <script type="text/javascript" src="js/efectos.js"></script>
+  <script type="text/javascript">
+        edgrid.menu('nav','menu');
+      </script>
 </body>
 </html>

@@ -287,7 +287,7 @@ $.ajax({
               if (respuesta.trim()=='correcto') {
                 //recargar la pagina
                   location.reload();
-                  location.href =urlweb;
+                  location.href =urlweb+'acuerdos';
 
               }
               else if(respuesta.trim()=='error') {

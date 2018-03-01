@@ -35,23 +35,23 @@ if (isset($_POST['nam'])) {
   <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
   <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-   <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/style.css">
-
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/styles.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/my-style.css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body class="fondo-oscuro">
 <?php include '../inc/header.php';?>
 
-<?php include '../inc/menu.php';?>
-<div class="contenedor fondo-blanco relleno-8 borde-negro" style="min-height: 600px;">
-      <div class="fila">
-          <div class="columna columna-m-12 columna-g-12">
+<div class="main-content fondo-blanco relleno-8 borde-negro">
+      <div class="ed-container">
+          <div class="ed-item m-100 l-100">
 
-    <center>
+          <div class="ed-container">
+            <div class="ed-item m-50 l-50">
+                <center>
            <h1>EDITAR PERFIL</h1>
     </center>
-            <div class="columna columna-m-6 columna-g-6">
-
+<br>
             <img id="imgenavatar" src="<?php echo $dato[0];?>user/avatar/<?php echo $datos_perfil['avatar'];?>" alt="<?php echo $datos_perfil['user'];?>">
 
 
@@ -70,44 +70,44 @@ if (isset($_POST['nam'])) {
           <br>
           <br>
             </div>
-            <div class="columna columna-m-6 columna-g-6">
+            <div class="ed-item  m-50 l-50">
 
-    <form onsubmit="return editar_user(nam.value,ap.value,user.value,pass.value,num.value);" action="" method="post" class="formulario" id="formEditar" style="max-width: 500px;">
+    <form onsubmit="return editar_user(nam.value,ap.value,user.value,pass.value,num.value);" action="" method="post" class="formulario" id="formEditar">
 
 
-                        <div class="formulario-grupo">
+                        <div class="form-team">
                               <label for="nam">Nombre:</label>
                               <input type="text" name="nam" id="nam" value="<?php echo $datos_perfil['name'];?>">
                         </div>
-                        <div class="formulario-grupo">
+                        <div class="form-team">
                               <label for="ap">Apellidos:</label>
                               <input type="text" name="ap" id="ap" value="<?php echo $datos_perfil['l_name'];?>">
                         </div>
 
-                        <div class="formulario-grupo">
+                        <div class="form-team">
                               <label for="user">Usuario:</label>
                               <input type="text" name="user" id="user" value="<?php echo $datos_perfil['user'];?>">
                         </div>
 
-                         <div class="formulario-grupo">
+                         <div class="form-team">
                               <label for="pass">Contraseña:</label>
                               <input type="password" name="pass" id="pass" value="">
                         </div>
 
 
-                         <div class="formulario-grupo">
+                         <div class="form-team">
                               <label for="num">telefono:</label>
                               <input type="text" name="num" id="num" value="<?php echo $datos_perfil['num'];?>">
                         </div>
 
 
 
-                        <div class="formulario-grupo oculto" id="registro-error">
+                        <div class="form-team oculto" id="registro-error">
                           <div id="registro-mensaje" class="alerta alerta-rojo alerta-pequenia" >Error</div>
                         </div>
 
-                        <div class="formulario-grupo">
-                            <input type="submit"  class="boton boton-verde derecha" value="guardar">
+                        <div class="form-team">
+                            <input type="submit"  class="button button-enviar derecha" value="guardar">
                         </div>
 
                     </form>
@@ -115,7 +115,7 @@ if (isset($_POST['nam'])) {
 
 
 
-
+            </div>
               </div>
 
           </div>
