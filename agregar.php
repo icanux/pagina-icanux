@@ -18,8 +18,6 @@ if (!isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
   <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/styles.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/my-style.css">
   <script type="text/javascript" src="<?php echo $dato[0];?>ckeditor/ckeditor.js" ></script>
-
-
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body class="fondo-oscuro">
@@ -85,7 +83,6 @@ if (!isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
 
 
 <?php include 'inc/footer.php';?>
-
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/ed-grid.js"></script>

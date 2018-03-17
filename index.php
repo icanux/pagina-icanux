@@ -1,336 +1,105 @@
-<?php require_once ('conexion.php');
-$menu = 'index';
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Icanux</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="img/HELMI1.ico">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="css/my-style.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<?php
 
-</head>
-<body class="body">
-  <?php require_once ('inc/header.php');?>
-  <div class="cabecera" id="f-i">
-    <div class="main-content ed-container main-center">
-      <form  class="form">
-        <div class="main-center">
-         <div class="icon-ii">
-           <img src="img/LOGO-ICANUX.png" style="width: 250px;"></div>
-         </div>
-         <br>
-         <div class="ed-container">
-          <div class="main-center">
-            <div class="cont">
-              <p>
-                La Comunidad de Software Libre Icanux es una comunidad formada inicialmente por estudiantes de Facultad de Sistemas de la Universidad Nacional "San Luis Gonzaga" de Ica, pero abierta a toda la comunidad iqueña interesada en proyectos FOSS.
-              </p>
-            </div>
-          </div>
+/**
+ * Este fichero es el núcleo del proyecto. La petición web llega aquí, y
+ * obtenemos la ruta via la variable de entorno REQUEST_URI, entonces este
+ * script determina qué fichero debe ejecutar (que debería ser el 'controlador'
+ * en un paradigma MVC), y pasarle el control a él.
+ */
 
+// PSR-4, boys and girls! :-D Las clases deben de autocargarse cuando sean
+// necesarias. Este es un autoloader que busca los ficheros dentro del
+// directorio `src`, usando el namespace y nombre de la clase como ruta.
+spl_autoload_register(function($class) {
 
-        </div>
-        <br><br>
-      </form>
-    </div>
+    // Reemplazamos el \ con el separador de rutas de este OS.
+    $filename = strtr($class, '\\', DIRECTORY_SEPARATOR);
 
+    // Y le añadimos el directorio base y la extension
+    $filename = 'src/' . $filename .'.php';
 
+    // Si existe, lo cargamos
+    if (file_exists($filename)) {
+        require_once $filename;
+    }
+});
 
-    <div class="ed-container main-center ">
+// Si existe el autoloader de composer, también lo cargamos
+$composer_autoloader = 'vendor/autoload.php';
+if (file_exists($composer_autoloader)) {
+    require_once $composer_autoloader;
+}
 
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block">
-          <div>
-            <a href="">
-              <div class="ed-container item-redes">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </div>
-            </a>
-          </div>
-        </div>
+// La ruta a la aplicación, que es básicamente la URL (o URI), la obtenemos de
+// 3 lugares:
 
-      </aside>
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block">
-          <div>
-            <a href="">
-              <div class="ed-container item-redes">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </aside>
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block">
-          <div>
-            <a href="">
-              <div class="ed-container item-redes">
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </aside>
-    </div>
+// Primero. Puede venir por la variable GET '_q'. Esto es usado por Apache via
+// .htaccess
+if (isset($_GET['_q'])) {
+    $ruta = $_GET['_q'];
 
+// Segundo. Puede venir por la variable de entorno PATH_INFO. Esta variable
+// debería contener una ruta que sigue a un fichero existente. E.g.
+// http://localhost/script.php/una/ruta . En este caso, PATH_INFO tendría como
+// valor 'una/ruta'. Pero cuando usemos Nginx, modificaremos manualmente esta
+// variable para darle el valor correcto.
+} elseif (isset($_SERVER['PATH_INFO'])) {
+    $ruta = $_SERVER['PATH_INFO'];
 
-  </div>
+// Tercero. Puede venir por REQUEST_URI. Esta variable tiene la ruta completa
+// de la petición. Útil cuando la aplicación está en la raiz de la web. Lo
+// usaremos principalmente para el servidor web de desarrollo de PHP
+} elseif (isset($_SERVER['REQUEST_URI'])) {
+    $ruta = $_SERVER['REQUEST_URI'];
 
-  <div class="main-content">
-    <div class="ed-container main-center">
-      <div class="nosotros">
-        <h1>nosotros</h1>
-        <p>Some our features about we. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.</p>
-      </div>
-    </div>
-    <div class="ed-container main-center centrar">
+// Si no hay nada de esto, pucha... no tengo idea qué hacer :')
+} else {
+    throw new Exception ('OMG NO PUDE UBICAR LA RUTA!!!!');
+    exit;
+}
 
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block"> 
-          <div class="ed-container main-center">
-            <div class="icon_our">
-              <div class="item-fa ed-container ed-fa">
-                <i class="fa fa-laptop" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <div class="main-title">
-            <h2 class="sidebar-block__title">Misión</h2>
-          </div>
-          <div class="mision">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-          </div>
-        </div>
+// N.b.: Todas estas líneas las pudimos condensar en una:
+//
+// $ruta = $_GET['_q'] ?? $_SERVER['PATH_INFO'] ?? $_SERVER['REQUEST_URI'] ?? null;
+//
+// Pero la forma que preferí es más legible :-)
 
-      </aside>
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block">
-          <div class="ed-container main-center">
-            <div class="icon_our">
-              <div class="item-fa ed-container ed-fa">
-                <i class="fa fa-rocket" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <div class="main-title"><h2 class="sidebar-block__title">Visión</h2></div>
-          <div class="vision">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-          </div>
-        </div>
-      </aside>
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block">
-          <div class="ed-container main-center">
-            <div class="icon_our">
-              <div class="item-fa ed-container ed-fa">
-                <i class="fa fa-heart" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <div class="main-title"><h2 class="sidebar-block__title">Objetivos</h2></div>
-          <div class="valores">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-          </div>
-        </div>
-      </aside>
-    </div>
-  </div>
+## BEGIN HACK
 
-  <div class="main-content software" >
-    <div class="ed-container">
-      <dib class="ed-item m-50 l-50">
-        <h2>¿Qué es el software libre?</h2>
+// Usando el .htaccess, cuando solicitas la raiz del proyecto, Apache modifica
+// la URL añadiendole el DocumentoRoot, en este caso 'index.php', que es pasado
+// a este script.
+//
+// Aun no sé como evitar ese comportamiento. Mientras tanto, lo removemos aquí.
+// Un hack feo, solo para que todo funcione :-P
+if ($ruta == 'index.php') {
+    $ruta = '';
+}
 
-        <blockquote ><p>
-          ¿Tiene alguna pregunta acerca de las licencias de software libre que no esté
-          respondida aquí? Consulte nuestra otra <a href="http://www.fsf.org/licensing">información sobre licencias</a>, y si es
-          necesario contacte con el Compliance Lab de la FSF en <a
-          href="mailto:licensing@fsf.org">licensing@fsf.org</a>.</p>
-        </blockquote>
+## END HACK
 
-      </dib>
-      <dib class="ed-item m-50 l-50">
-        <img src="img/images.png">
-      </dib>
-    </div>
-  </div>
+// Removemos los slashs iniciales y finales
+$ruta = trim($ruta, '/');
 
-  <div class="main-content">
-    <div class="ed-container">
-      <div class="ed-item m-50">
-        <div class="div-software-libre">
-          <h3>Definición de software libre</h3>
-          <blockquote>
-            <p>
-              La definición de software libre estipula los criterios que se tienen que
-              cumplir para que un programa sea considerado libre. De vez en cuando
-              modificamos esta definición para clarificarla o para resolver problemas
-              sobre cuestiones delicadas. Más abajo en esta página, en la sección <a
-              href="#History">Historial</a>, se puede consultar la lista de modificaciones
-              que afectan la definición de software libre.
-            </p>
-          </blockquote>
+// La carpeta 'static' es especial: Es servida directo por el servidor web, sin
+// pasar por este script. Para que eso funcione en el servidor de desarrollo de
+// PHP, tenemos que retornar false. Para los demás, jamás debería de llegar
+// a este if.
+if (substr($ruta, 0, 7) == 'static/') {
+    return false;
+}
 
+// Iniciamos la clase de Ruteo
+$ruteador = new Ruteo($ruta);
 
+// Obtenemos el script y los parámetros que obtuvo.
+$controlador = $ruteador->obtenerControlador();
+$parámetros = $ruteador->obtenerParámetros();
 
-          <p>
-            «Software libre» es el software que respeta la libertad de los usuarios y la
-            comunidad. A grandes rasgos, significa que <b>los usuarios tienen la
-            libertad de ejecutar, copiar, distribuir, estudiar, modificar y mejorar el
-            software</b>. Es decir, el «software libre» es una cuestión de libertad, no
-            de precio. Para entender el concepto, piense en «libre» como en «libre
-            expresión», no como en «barra libre». En inglés, a veces en lugar de «free
-            software» decimos «libre software», empleando ese adjetivo francés o
-            español, derivado de «libertad», para mostrar que no queremos decir que el
-            software es gratuito.
-          </p>
-
-          <p>
-            Promovemos estas libertades porque todos merecen tenerlas. Con estas
-            libertades, los usuarios (tanto individualmente como en forma colectiva)
-            controlan el programa y lo que este hace. Cuando los usuarios no controlan
-            el programa, decimos que dicho programa «no es libre», o que es
-            «privativo».  Un programa que no es libre controla a los usuarios, y el
-            programador controla el programa, con lo cual el programa resulta ser <a
-            href="/philosophy/free-software-even-more-important.html">un instrumento de
-            poder injusto</a>.
-          </p>
-        </div>
-      </div>
-      <div class="ed-item m-50 main-center">
-        <img src="https://minimaloslinux.files.wordpress.com/2016/05/softwarelibre.png?w=648">
-      </div>
-    </div>
-  </div>
-
-
-  <div class="libertad">
-    <div class="ed-container">
-      <div class="ed-item m-50">
-        <div class="ed-libertades">
-          <p> Las 4 libertades esenciales</p>
-        </div>
-      </div>
-      <div class="ed-item m-50">
-        <img src="https://cdn4.iconfinder.com/data/icons/Birdies_by_arrioch/png%20512/pidgin.png" style="height: 50%;">
-      </div>
-    </div>
-  </div>
-<br><br>
-  <div class="main-content">
-    <div class="ed-container">
-      <div class="ed-item full full">
-        <div class="div-software-libre">
-          <div class="centrar">
-            <h3>
-              <p>Un programa es software libre si los usuarios tienen las cuatro libertades
-                esenciales:</p>
-              </h3>
-            </div>
-
-            <div class="ed-container main-center">
-              <div class="ed-item m-40 l-40 item-libertades">
-                <div class="ed-item-libertad">
-                  <div class="item-libertad__icon center">
-                    <i class="fa fa-heart"></i>
-                    <small>0</small>
-                  </div>
-                </div>
-                <p>La libertad de ejecutar el programa como se desea, con cualquier propósito
-                  (libertad 0).</p>
-                </div>
-                <div class="ed-item m-40 l-40 item-libertades">
-                  <div class="ed-item-libertad">
-                    <div class="item-libertad__icon center">
-                      <i class="fa fa-heart"></i>
-                      <small>1</small>
-                    </div>
-                  </div>
-                  <p>La libertad de estudiar cómo funciona el programa, y cambiarlo para que haga
-                    lo que usted quiera (libertad 1). El acceso al código fuente es una
-                    condición necesaria para ello.</p>
-                  </div>
-                  <div class="ed-item m-40 l-40 item-libertades">
-                    <div class="ed-item-libertad">
-                      <div class="item-libertad__icon center">
-                        <i class="fa fa-heart"></i>
-                        <small>2</small>
-                      </div>
-                    </div>
-                    <p>La libertad de redistribuir copias para ayudar a su prójimo (libertad 2).</p>
-                  </div>
-                  <div class="ed-item m-40 l-40 item-libertades">
-                    <div class="ed-item-libertad">
-                      <div class="item-libertad__icon center">
-                        <i class="fa fa-heart"></i>
-                        <small>3</small>
-                      </div>
-                    </div>
-                    <p>La libertad de distribuir copias de sus versiones modificadas a terceros
-                      (libertad 3). Esto le permite ofrecer a toda la comunidad la oportunidad de
-                      beneficiarse de las modificaciones.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="ed-item full">
-                <p>
-                    Un programa es software libre si otorga a los usuarios todas estas
-                    libertades de manera adecuada. De lo contrario no es libre. Existen diversos
-                    esquemas de distribución que no son libres, y si bien podemos distinguirlos
-                    en base a cuánto les falta para llegar a ser libres, nosotros los
-                    consideramos contrarios a la ética a todos por igual.</p>
-
-                    <p>En cualquier circunstancia, estas libertades deben aplicarse a todo código
-                    que pensemos utilizar hacer que otros utilicen. Tomemos por ejemplo un
-                    programa A que automáticamente ejecuta un programa B para que realice alguna
-                    tarea. Si se tiene la intención de distribuir A tal cual, esto implica que
-                    los usuarios necesitarán B, de modo que es necesario considerar si tanto A
-                    como B son libres. No obstante, si se piensa modificar A para que no haga
-                    uso de B, solo A debe ser libre; B no es relevante en este caso. </p>
-
-                    <p>
-                    «Software libre» no significa que «no es comercial». Un programa libre debe
-                    estar disponible para el uso comercial, la programación comercial y la
-                    distribución comercial. La programación comercial de software libre ya no es
-                    inusual; el software libre comercial es muy importante. Puede haber pagado
-                    dinero para obtener copias de software libre, o puede haber obtenido copias
-                    sin costo. Pero sin tener en cuenta cómo obtuvo sus copias, siempre tiene la
-                    libertad de copiar y modificar el software, incluso de <a
-                    href="/philosophy/selling.html">vender copias</a>.
-                    </p>
-
-                    <p>En el resto de esta página tratamos algunos puntos que aclaran qué es lo que
-                    hace que las libertades específicas sean adecuadas o no.</p>
-              </div>
-              <div class="ed-item full" style="display: flex; justify-content: center">
-                <img src="img/HELMI2.png">
-                <br>
-                <img src="img/HELMI1.png">
-              </div>
-            </div>
-          </div>
-
-
-          <?php require_once ('inc/footer.php');?>
-
-<script src="js/ed-grid.js"></script>
-<script type="text/javascript">
-edgrid.menu('nav','menu');
-</script>
-</body>
-</html>
+// Y... cargamos el controlador
+if (file_exists($controlador)) {
+    require $controlador;
+} else {
+    // O mostramos un 404 si no encontró nada.
+    require '404.php';
+}

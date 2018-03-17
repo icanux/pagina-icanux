@@ -119,8 +119,8 @@ $cantidad      = count($partes);
 
         })  ;
 </script>
-<script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
-<script type="text/javascript" src="<?php echo $dato[0];?>/js/efectos.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="/js/efectos.js"></script>
 </body>
 </html>
 

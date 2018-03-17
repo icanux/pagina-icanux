@@ -1,4 +1,4 @@
-<?php require_once ('../conexion.php');
+<?php require_once ('conexion.php');
 
 $menuadmin = 'admin';
 
@@ -40,4 +40,3 @@ if (!isset($_SESSION['iduser']) || rango($_SESSION['iduser']) != 10) {header('lo
 <script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
 </body>
 </html>
-

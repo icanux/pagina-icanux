@@ -84,5 +84,4 @@ $cantidad_post          = mysqli_num_rows($consulta_post);
 					</body>
 					</html>
 
-
 <?php mysqli_free_result($consulta_post);

@@ -4,6 +4,7 @@
 		<li <?php if ($menuadmin == 'admin') {echo 'class="menu-activo-admin"';
 }
 
+
 ?>  ><a href="<?php echo $dato[0];?>admin/" class="a-admin">Administración</a></li>
 	<li  <?php if ($menuadmin == 'datos') {echo 'class="menu-activo-admin"';
 }
