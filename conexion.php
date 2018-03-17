@@ -7,8 +7,8 @@ if (!isset($_SESSION)) {session_start();
 //CONEXIÓN A LA BASE DE DATOS
 $hostname_db = "localhost";
 $database_db = "icanux";
-$username_db = "";
-$password_db = "";
+$username_db = getenv("ICANUX_DB_USERNAME");
+$password_db = getenv("ICANUX_DB_PASSWORD");
 //Conectar a la base de datos
 $conexion = mysqli_connect($hostname_db, $username_db, $password_db);
 
