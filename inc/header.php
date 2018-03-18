@@ -39,19 +39,8 @@ if ($iduser) {
 <li <?php if ($menu == 'noticias') {echo 'class="menu-activo"';
 }
 
-<<<<<<< HEAD
 ?>>
 <a href="<?php echo $dato[0];?>noticias">noticias</a></li>
-
-=======
-			<a href="">
-
-<?php if ($dato[4] != '') {?>
-																					<img  id="milogo"src="static/img/<?php echo $dato[4];?>">
-	<?php } else {?>
-																					<img  id="milogo"src="static/img/banner.png">
->>>>>>> ac69281a418992276ba6a496aa3464391203c14a
-
 
 <?php if (isset($_SESSION['iduser'])) {?>
 <li <?php if ($menu == 'acuerdos') {echo 'class="menu-activo"';
@@ -92,7 +81,6 @@ if ($iduser) {
 <?php }?>
 <li>
 <?php if (!isset($_SESSION['iduser'])) {?>
-<<<<<<< HEAD
 <li><a href="<?php echo $dato[0];?>iniciar"  class=" button button-enviar">Iniciar</a> </li>
 <li> <a href="<?php echo $dato[0];?>registro" class=" button">Registrarse</a> </li>
 <?php } else {
@@ -103,19 +91,6 @@ if ($iduser) {
 	?> --></a></li> <br>
 	<li><a href="<?php echo $dato[0];?>inc/salir.php?cerrar=yes" class=" button button-salir">Salir
 	</a></li>
-=======
-																				<a href="iniciar"  class=" boton boton-verde">Iniciar</a>
-																				<a href="registro" class=" boton boton-rojo">Registrarse</a>
-	<?php } else {
-	?>
-																					<a href="user/perfil"  class="">
-
-															<img src="user/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi">
-							<!-- <?php echo $_SESSION['nombreuser'];
-	?> --></a>
-																						<a href="inc/salir.php?cerrar=yes" class=" boton boton-salir">&times;
-																						</a>
->>>>>>> ac69281a418992276ba6a496aa3464391203c14a
 	<?php
 }
 ?>
@@ -124,12 +99,5 @@ if ($iduser) {
 </nav>
 </div>
 
-
-<<<<<<< HEAD
 </div>
 </header>
-=======
-			</div>
-		</div>
-	</header>
->>>>>>> ac69281a418992276ba6a496aa3464391203c14a

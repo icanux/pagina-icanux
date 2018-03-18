@@ -1,4 +1,4 @@
-	<?php
+<?php
 function formatearcadena($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") {
 	//Iniciamos la variable $conexion
 	global $conexion;
@@ -94,4 +94,3 @@ if (isset($_COOKIE['idcookie']) && isset($_COOKIE['nombrecookie']) && !isset($_S
 	$_SESSION['iduser']     = $_COOKIE['idcookie'];
 	$_SESSION['nombreuser'] = $_COOKIE['nombrecookie'];
 }
-?>
