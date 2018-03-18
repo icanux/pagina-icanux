@@ -25,19 +25,8 @@ $accion_post   = "SELECT * FROM post WHERE $consulta ORDER BY id DESC";
 $consulta_post = mysqli_query($conexion, $accion_post);
 $datos_post    = mysqli_fetch_assoc($consulta_post);
 $cantidad_post = mysqli_num_rows($consulta_post);
-
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title><?php echo $dato_post['title'];?></title>
-	<link rel="shorcut icon" type="image/x-icon" href="img/HELMI1.ico">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-</head>
+require_once('inc/head.php');
+?>
 <body class="fondo-oscuro">
 
 

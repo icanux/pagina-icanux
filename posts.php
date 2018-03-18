@@ -1,24 +1,12 @@
 <?php require_once ('conexion.php');
-
 $menu                   = 'posts';
 $_SESSION['paginacion'] = 0;
 $accion_post            = sprintf("SELECT * FROM post ORDER BY id DESC 	");
 $consulta_post          = mysqli_query($conexion, $accion_post);
 $datos_post             = mysqli_fetch_assoc($consulta_post);
 $cantidad_post          = mysqli_num_rows($consulta_post);
-
+require_once('inc/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>posts</title>
-	<link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/styles.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/my-style.css">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-</head>
 <body class="fondo-oscuro">
 <?php include 'inc/header.php';?>
 <div class="main-content" style="">

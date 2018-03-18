@@ -1,18 +1,7 @@
 <?php require_once ('conexion.php');
 $menu = 'index';
+require_once('inc/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Icanux</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="img/HELMI1.ico">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="css/my-style.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
-</head>
 <body class="body">
   <?php require_once ('inc/header.php');?>
   <div class="cabecera" id="f-i">
@@ -20,7 +9,7 @@ $menu = 'index';
       <form  class="form">
         <div class="main-center">
          <div class="icon-ii">
-           <img src="img/LOGO-ICANUX.png" style="width: 250px;"></div>
+           <img src="static/img/LOGO-ICANUX.png" style="width: 250px;"></div>
          </div>
          <br>
          <div class="ed-container">

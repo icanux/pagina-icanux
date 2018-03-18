@@ -1,4 +1,4 @@
-<?php require_once ('../conexion.php');
+<?php require_once ('conexion.php');
 //valdidar formulario
 if (!isset($_POST['user']) || $_POST['user'] == '' || $_POST['pass'] == '') {exit;
 }

@@ -4,24 +4,8 @@ $menu = 'iniciar';
 
 if (isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
 }
-
+require_once('inc/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Iniciar</title>
-  <link rel="shorcut icon" type="image/x-icon" href="img/HELMI1.ico">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-  	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="css/my-style.css">
-
-
-
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-</head>
 <body class="fondo-oscuro" id="f-i" >
 <?php include 'inc/header.php';?>
 
@@ -77,11 +61,7 @@ if (isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
   </div>
 
   <div>
-<!-- <?php include 'inc/footer.php';?>
-</div> -->
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/efectos.js"></script>
-  <script type="text/javascript" src="js/ed-grid.js"></script>
-
+ <?php include'inc/footer.php';?>
+</div>
 </body>
 </html>

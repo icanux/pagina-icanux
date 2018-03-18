@@ -1,4 +1,4 @@
-  var urlweb='http://localhost/icanux/'
+  var urlweb=document.getElementsByTagName("base")[0].href
 
 
   function subir(){
@@ -272,13 +272,10 @@ $.ajax({
 
   function login(user, pass){
     if (user.trim() != '' && pass.trim() != ''){
-
-
-
       	//enviar registro
       	$.ajax({
       		type:'POST',
-      		url: urlweb + 'inc/login.php',
+      		url: urlweb + 'login',
       		cache: false,
       		//ata: 'user' + user + '&correo' + correo + '&pass1',
       		data: $('#formInicio').serialize(),

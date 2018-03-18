@@ -24,27 +24,8 @@ $_SESSION['idpost'] = $datos_post['id'];
 $imagenes = $datos_post['image'];
 $partes   = explode('####', $imagenes);
 $cantidad = count($partes);
+require_once('inc/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title><?php echo $datos_post['title'];?></title>
-	<link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/styles.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/my-style.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>slider/responsiveslides.css">
-	<script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="<?php echo $dato[0];?>slider/responsiveslides.min.js"></script>
-	<script type="text/javascript" src="<?php echo $dato[0];?>ckeditor/ckeditor.js" ></script>
-
-
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="description" content="<?php echo substr(strip_tags($datos_post['content']), 0, 500);?>">
-	<meta name="robots" content="index, follow">
-</head>
 <body style="background: #101010;color: #f5f5f5;">
 	<?php include 'inc/header.php';?>
 	<div class="main-content fondo-gris relleno-8 borde-negro">

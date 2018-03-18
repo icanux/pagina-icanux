@@ -4,22 +4,8 @@ $menu = 'registro';
 
 if (isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
 }
-
+require_once('inc/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Registro</title>
-  <link rel="shorcut icon" type="image/x-icon" href="img/HELMI1.ico">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-
-
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-</head>
 <body class="fondo-oscuro">
 <?php include 'inc/header.php';?>
 <div ed-container>
