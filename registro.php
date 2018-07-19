@@ -32,9 +32,16 @@ require_once('inc/head.php');
                               <input type="text" name="user" id="user" class="nombre" placeholder="Nombre de usuario...">
                         </div>
 
-                         <div class="form-team">
+                         <div class="form-team">       
                               <label for="correo">Email:</label>
-                              <input type="email" name="correo" id="correo" placeholder="Ejemplo@icanux.com">
+                              <div class="ed-container ed-item">
+                                  <div class="l-50">
+                                    <input type="email" name="correo" id="correo" placeholder="Ejemplo@icanux.com" >
+                                  </div>
+                              <div class="l-50">
+                                  <input type="text" value="@icanux.com" name="" readonly="">
+                              </div>
+                        </div>
                         </div>
 
                          <div class="form-team">

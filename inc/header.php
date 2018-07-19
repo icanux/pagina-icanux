@@ -86,7 +86,14 @@ if ($iduser) {
 }
 
 ?>><a href="<?php echo $dato[0];?>iniciar">Iniciar</a> </li>
-<li> <a href="<?php echo $dato[0];?>registro" class=" button">Registrarse</a> </li>
+
+<li <?php if ($menu == 'contacto') {echo 'class="menu-activo"';
+}
+
+?>>
+<a href="../ContactFrom_v6/index.html">Conctactanos</a></li>
+
+<li> <a href="<?php echo $dato[0];?>registro" class=" button button-enviar">Registrarse</a> </li>
 <?php } else {
 ?>
 <li> <a href="<?php echo $dato[0];?>user/perfil"  class="user-image">

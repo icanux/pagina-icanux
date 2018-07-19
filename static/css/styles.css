@@ -25,7 +25,9 @@ a {
 main {
   color: #555;
   margin-top: 2em; }
-
+.chuc{
+  max-width: 350px;
+}
 .ed-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -701,7 +703,9 @@ body.sticky-footer {
   color: #9d9d9d;
 }
 .menu-activo {
-  background-color:#d9534f;
+     border: 1px solid #727272;
+    background-color: #494646;
+    border-radius: 5px;
 }
 .menu-negro .menu-activo a {
   color: #E4E4E4 !important;

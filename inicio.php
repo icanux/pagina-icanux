@@ -153,7 +153,7 @@ require_once('inc/head.php');
 
       </dib>
       <dib class="ed-item m-50 l-50">
-        <img src="static/img/images.png">
+        <img src="static/img/free.png">
       </dib>
     </div>
   </div>
@@ -300,7 +300,7 @@ require_once('inc/head.php');
                     hace que las libertades específicas sean adecuadas o no.</p>
                     <br><br>
                     <center>
-              <img src="https://2.bp.blogspot.com/-FHovlK70slM/WiDUHowrELI/AAAAAAAADH0/C4pSwWE3slE5otCIdXLa1kZQSLl5EVZmQCLcBGAs/s1600/Unix-Daemon.png" width="50%">
+              <img src="https://2.bp.blogspot.com/-FHovlK70slM/WiDUHowrELI/AAAAAAAADH0/C4pSwWE3slE5otCIdXLa1kZQSLl5EVZmQCLcBGAs/s1600/Unix-Daemon.png" class="chuc" width="50%">
             </center>
                     <br><br><br><br>
               </div>
