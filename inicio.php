@@ -2,7 +2,7 @@
 $menu = 'index';
 require_once('inc/head.php');
 ?>
-<body>
+<body class="body-stars">
   <?php require_once ('inc/header.php');?>
   <div class="cabecera" id="f-i">
     <div class="main-content ed-container main-center">
@@ -15,65 +15,30 @@ require_once('inc/head.php');
          <div class="ed-container">
           <div class="main-center">
             <div class="cont">
-              <p>
-                La Comunidad de Software Libre Icanux es una comunidad formada inicialmente por estudiantes de Facultad de Sistemas de la Universidad Nacional "San Luis Gonzaga" de Ica, pero abierta a toda la comunidad iqueña interesada en proyectos FOSS.
-              </p>
+                <h1 class="icanux-title ">
+                  <em>I</em>
+                  <em class="planet left">C</em>
+                  <em>A</em>
+                  <em>N</em>
+                  <em class="planet right">U</em>
+                  <em>X</em>
+                </h1>
             </div>
           </div>
 
-
         </div>
-        <br><br>
       </form>
     </div>
 
-
-
-    <div class="ed-container icon-redes">
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block">
-          <div>
-            <a href="">
-              <div class="ed-container item-redes">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-
-      </aside>
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block">
-          <div>
-            <a href="">
-              <div class="ed-container item-redes">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </aside>
-      <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block">
-          <div>
-            <a href="">
-              <div class="ed-container item-redes">
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </aside>
-    </div>
-
-
+  
   </div>
 
   <div class="main-content main-conainer-article">
     <div class="ed-container main-center">
       <div class="nosotros">
-        <h1>nosotros</h1>
-        <p>Some our features about we. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.</p>
+        <h1 class="nosotros-p">Nosotros</h1>
+        <p> Somos una comunidad encargada de difundir y promover el uso del Software Libre, formada inicialmente por estudiantes de Facultad de Sistemas de la Universidad Nacional "San Luis Gonzaga" de Ica, pero abierta a toda la comunidad iqueña interesada en proyectos FOSS.  
+        </p>
       </div>
     </div>
     <div class="ed-container main-center centrar">
@@ -91,10 +56,7 @@ require_once('inc/head.php');
             <h2 class="sidebar-block__title">Misión</h2>
           </div>
           <div class="mision">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+           Promover el desarrollo tecnológico basado en Software Libre mediante campañas de difusión, educativas y culturales a través de los diversos medios que se puedan acceder.
           </div>
         </div>
 
@@ -110,10 +72,7 @@ require_once('inc/head.php');
           </div>
           <div class="main-title"><h2 class="sidebar-block__title">Visión</h2></div>
           <div class="vision">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+            Llegar a ser una comunidad que pueda desarrollar proyectos de  ciencia y tecnologia en beneficio de la region ICA.
           </div>
         </div>
       </aside>
@@ -128,10 +87,7 @@ require_once('inc/head.php');
           </div>
           <div class="main-title"><h2 class="sidebar-block__title">Objetivos</h2></div>
           <div class="valores">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+            promover y difundir el uso, desarrollo e investigación de Tecnología de la Información basados en Software Libre. Innovando el acceso a la educación, desarrollo e independencia tecnológica.
           </div>
         </div>
       </aside>

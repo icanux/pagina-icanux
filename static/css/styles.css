@@ -703,9 +703,9 @@ body.sticky-footer {
   color: #9d9d9d;
 }
 .menu-activo {
-     border: 1px solid #727272;
-    background-color: #494646;
-    border-radius: 5px;
+    background-color: transparent;
+  border-radius: 33px;
+  border-bottom: 2px solid #ec1515;
 }
 .menu-negro .menu-activo a {
   color: #E4E4E4 !important;
@@ -941,7 +941,7 @@ body.sticky-footer {
 
 @media screen and (max-width: 1023px) {
   .main-nav {
-    margin-top: 49px;
+    margin-top: 69px;
     -ms-flex-item-align: stretch;
     align-self: stretch;
     background: #2f2f2f; } }
