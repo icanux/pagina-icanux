@@ -16,7 +16,7 @@ body{
     border: 2px solid red;
     border-radius: 50%;
     opacity: 1;
-    background-color: #ffffffe3;
+    background-color: #e1dada1a;
     border: 3px solid #d9534f;
     transition: 1s all;
 }

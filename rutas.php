@@ -18,6 +18,8 @@
     // Perfil del usuario. No se por qué pasa 'nombre', habrá que
     // preguntarle a @elmer-rl :-D
     ['^perfil/(?<id>.+?)/(?<nombre>.+?)$', 'user/usuario.php'],
+    ['^admin/$', 'admin/index.php'],
+    ['admin/(?<app>.+?)$','admin/{app}.php'],
 
     // Si no existe ningún patrón de ruta especial, ubicamos un fichero
     // con el nombre de la ruta.
