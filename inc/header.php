@@ -7,6 +7,12 @@
 // como tenía desactivado el error_log ...
 include_once ('conexion.php');
 
+// HACK COCHINO. Elmer guarda la ruta base de la aplicación en la base de datos,
+// y luego usa esa ruta en todos los enlaces, lo cual es... problemático :-P
+//
+// Removemos esa data, para que los enlaces sean relativos al valor de <base>
+$dato[0] = '';
+
 // Más flojera... si no existe $iduser, entonces no ejecutamos el query.
 $iduser = $_SESSION['iduser'] ?? null;
 if ($iduser) {
@@ -32,7 +38,7 @@ if ($iduser) {
 }
 
 ?>>
-<a href="<?php echo $dato[0];?>">home</a></li>
+<a href="<?php echo $dato[0];?>">Inicio</a></li>
 
 
 
@@ -40,14 +46,14 @@ if ($iduser) {
 }
 
 ?>>
-<a href="<?php echo $dato[0];?>noticias">noticias</a></li>
+<a href="<?php echo $dato[0];?>noticias">Noticias</a></li>
 
 <?php if (isset($_SESSION['iduser'])) {?>
 <li <?php if ($menu == 'acuerdos') {echo 'class="menu-activo"';
 }
 
 ?>>
-<a href="<?php echo $dato[0];?>acuerdos">acuerdos</a></li>
+<a href="<?php echo $dato[0];?>acuerdos">Acuerdos</a></li>
 
 <?php }?>
 
@@ -56,7 +62,7 @@ if ($iduser) {
 <li <?php if ($menu == 'usuarios') {echo 'class="menu-activo"';
 }
 
-?>><a href="<?php echo $dato[0];?>usuarios">usuarios</a></li>
+?>><a href="<?php echo $dato[0];?>usuarios">Usuarios</a></li>
 <?php }?>
 
 <?php if (isset($_SESSION['iduser'])) {?>
@@ -69,7 +75,7 @@ if ($iduser) {
 <li <?php if ($menu == 'posts') {echo 'class="menu-activo"';
 }
 
-?>><a href="<?php echo $dato[0];?>posts">posts</a></li>
+?>><a href="<?php echo $dato[0];?>posts">Posts</a></li>
 <?php }?>
 
 
@@ -97,7 +103,7 @@ if ($iduser) {
 <?php } else {
 ?>
 <li> <a href="<?php echo $dato[0];?>user/perfil"  class="user-image">
-<img src="<?php echo $dato[0];?>static/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi"> 
+<img src="<?php echo $dato[0];?>static/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi">
 	 <!-- <?php echo $_SESSION['nombreuser'];
 	?> --></a></li> <br>
 	<li><a href="<?php echo $dato[0];?>inc/salir.php?cerrar=yes" class=" button button-salir">Salir
