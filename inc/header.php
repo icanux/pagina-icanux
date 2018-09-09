@@ -91,7 +91,7 @@ if ($iduser) {
 }
 
 ?>>
-<a href="../ContactFrom_v6/index.html">Conctactanos</a></li>
+<a href="<?php echo $dato[0];?>contact/index.php">Conctactanos</a></li>
 
 <li> <a href="<?php echo $dato[0];?>registro" class=" button button-enviar">Registrarse</a> </li>
 <?php } else {
