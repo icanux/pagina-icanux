@@ -30,21 +30,21 @@ require_once('inc/head.php');
       </form>
     </div>
 
-  
+
   </div>
 
   <div class="main-content main-conainer-article">
     <div class="ed-container main-center">
       <div class="nosotros">
         <h1 class="nosotros-p">Nosotros</h1>
-        <p> Somos una comunidad encargada de difundir y promover el uso del Software Libre, formada inicialmente por estudiantes de Facultad de Sistemas de la Universidad Nacional "San Luis Gonzaga" de Ica, pero abierta a toda la comunidad iqueña interesada en proyectos FOSS.  
+        <p> Somos una comunidad encargada de difundir y promover el uso del Software Libre, formada inicialmente por estudiantes de Facultad de Sistemas de la Universidad Nacional "San Luis Gonzaga" de Ica, pero abierta a toda la comunidad iqueña interesada en proyectos FOSS.
         </p>
       </div>
     </div>
     <div class="ed-container main-center centrar">
 
       <aside class="ed-item l-1-3 m-1-3">
-        <div class="sidebar-block"> 
+        <div class="sidebar-block">
           <div class="ed-container main-center">
             <div class="icon_our">
               <div class="item-fa ed-container ed-fa">
@@ -105,7 +105,7 @@ require_once('inc/head.php');
           necesario contacte con el Compliance Lab de la FSF en <a
           href="mailto:licensing@fsf.org">licensing@fsf.org</a>
           </p>
-        
+
 
       </dib>
       <dib class="ed-item m-50 l-50">
@@ -119,13 +119,14 @@ require_once('inc/head.php');
       <div class="ed-item full">
         <div class="div-software-libre">
           <h3>Definición de software libre</h3>
+          <p>(Tomado de <a href="https://www.gnu.org/philosophy/free-sw.html" target="_blank">https://www.gnu.org/philosophy/free-sw.html</a>)
           <blockquote>
             <p>
               La definición de software libre estipula los criterios que se tienen que
               cumplir para que un programa sea considerado libre. De vez en cuando
               modificamos esta definición para clarificarla o para resolver problemas
               sobre cuestiones delicadas. Más abajo en esta página, en la sección <a
-              href="#History">Historial</a>, se puede consultar la lista de modificaciones
+              href="https://www.gnu.org/philosophy/free-sw.es.html#History" target="_blank">Historial</a>, se puede consultar la lista de modificaciones
               que afectan la definición de software libre.
             </p>
           </blockquote>
@@ -151,12 +152,12 @@ require_once('inc/head.php');
             el programa, decimos que dicho programa «no es libre», o que es
             «privativo».  Un programa que no es libre controla a los usuarios, y el
             programador controla el programa, con lo cual el programa resulta ser <a
-            href="/philosophy/free-software-even-more-important.html">un instrumento de
+            href="https://www.gnu.org/philosophy/free-software-even-more-important.html">un instrumento de
             poder injusto</a>.
           </p>
           <br>
           <center>
-          <img src="https://wallscover.com/images/debian-wallpaper-3.jpg">
+          <img src="static/img/debian-logo.jpg" />
           </center>
         </div>
       </div>
@@ -165,7 +166,7 @@ require_once('inc/head.php');
     <div class="ed-container">
       <div class="ed-item full full">
         <div class="div-software-libre">
-        <hr>  
+        <hr>
         <div class="ed-libertades">
           <p> Las 4 libertades esenciales</p>
         </div>
@@ -249,18 +250,18 @@ require_once('inc/head.php');
                     dinero para obtener copias de software libre, o puede haber obtenido copias
                     sin costo. Pero sin tener en cuenta cómo obtuvo sus copias, siempre tiene la
                     libertad de copiar y modificar el software, incluso de <a
-                    href="/philosophy/selling.html">vender copias</a>.
+                    href="https://www.gnu.org/philosophy/selling.html" target="_blank">vender copias</a>.
                     </p>
 
                     <p>En el resto de esta página tratamos algunos puntos que aclaran qué es lo que
                     hace que las libertades específicas sean adecuadas o no.</p>
                     <br><br>
                     <center>
-              <img src="https://2.bp.blogspot.com/-FHovlK70slM/WiDUHowrELI/AAAAAAAADH0/C4pSwWE3slE5otCIdXLa1kZQSLl5EVZmQCLcBGAs/s1600/Unix-Daemon.png" class="chuc" width="50%">
+              <img src="static/img/bsd-chuck.png" class="chuc" />
             </center>
                     <br><br><br><br>
               </div>
-              
+
             </div>
           <?php require_once ('inc/footer.php');?>
 </body>
