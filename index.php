@@ -89,6 +89,17 @@ if (substr($ruta, 0, 7) == 'static/') {
     return false;
 }
 
+// Obtenemos la URL base para todas las páginas, que será el directorio donde
+// está guardado este index.php (asumiendo que hay una relación entre ámbos)
+$base_path = dirname($_SERVER['SCRIPT_NAME']);
+
+// Le añadimos un slash si no tiene
+if (substr($base_path, -1, 1) != "/") {
+    $base_path .= '/';
+}
+
+define('BASE_PATH', $base_path);
+
 // Iniciamos la clase de Ruteo
 $ruteador = new Ruteo($ruta);
 
