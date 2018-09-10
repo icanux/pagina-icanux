@@ -1,4 +1,5 @@
 <br><br>
+<!--
 <form class="buscador" method="get" action="<?php echo $dato[0];?>resultados">
 	<input type="text" class="buscador-campo" placeholder="Buscar.." name="buscar">
 	<input type="submit" class="button" value="">
@@ -19,11 +20,23 @@
   </ul>
 </div>
 </div>
+-->
 
-
+<h1>
+	<center>
+		Redes sociales
+	</center>
+	
+</h1>
 <?php if ($dato[5] != '') {?>
-	<div class="margen-arriba">
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-						</div>
+<div class="fb-page" data-href="https://www.facebook.com/icanux" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/icanux" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/icanux">ICANUX</a></blockquote></div>
 	<?php }?>

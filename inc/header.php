@@ -87,19 +87,21 @@ if ($iduser) {
 <?php }?>
 <li>
 <?php if (!isset($_SESSION['iduser'])) {?>
+<a href="<?php echo $dato[0];?>contact/index.php">Conctactanos</a></li>
+<li>
+	<a class="event" href="https://eventos.icanux.org/">
+	Eventos
+</a>
+</li>
 <li
 <?php if ($menu == 'agregar') {echo 'class="menu-activo"';
 }
 
-?>><a href="<?php echo $dato[0];?>iniciar">Iniciar</a> </li>
-
+?>><a href="<?php echo $dato[0];?>iniciar" class="button button-enviar">Iniciar</a> </li>
 <li <?php if ($menu == 'contacto') {echo 'class="menu-activo"';
 }
 
 ?>>
-<a href="<?php echo $dato[0];?>contact/index.php">Conctactanos</a></li>
-
-<li> <a href="<?php echo $dato[0];?>registro" class=" button button-enviar">Registrarse</a> </li>
 <?php } else {
 ?>
 <li> <a href="<?php echo $dato[0];?>user/perfil"  class="user-image">

@@ -21,9 +21,10 @@
 
     
     ['^admin/$', 'admin/index.php'],
-    ['admin/(?<app>.+?)$','admin/{app}.php'],
+    ['^admin/(?<app>.?)$','admin/{app}.php'],
 
-    ['^contact/$','contact/index.php'],
+    ['^contact/(<>.?+)$','contact/index.php'],
+    ['^contact/(<?file>.+?)$', 'contact/{file}'],
 
     // Si no existe ningún patrón de ruta especial, ubicamos un fichero
     // con el nombre de la ruta.

@@ -119,14 +119,14 @@ require_once('inc/head.php');
       <div class="ed-item full">
         <div class="div-software-libre">
           <h3>Definición de software libre</h3>
-          <p>(Tomado de <a href="https://www.gnu.org/philosophy/free-sw.html" target="_blank">https://www.gnu.org/philosophy/free-sw.html</a>)
+          <p>(Tomado de <a href="https://www.gnu.org/philosophy/free-sw.html" class="ref" target="_blank">https://www.gnu.org/philosophy/free-sw.html</a>)
           <blockquote>
             <p>
               La definición de software libre estipula los criterios que se tienen que
               cumplir para que un programa sea considerado libre. De vez en cuando
               modificamos esta definición para clarificarla o para resolver problemas
               sobre cuestiones delicadas. Más abajo en esta página, en la sección <a
-              href="https://www.gnu.org/philosophy/free-sw.es.html#History" target="_blank">Historial</a>, se puede consultar la lista de modificaciones
+              href="https://www.gnu.org/philosophy/free-sw.es.html#History" target="_blank" class="ref">Historial</a>, se puede consultar la lista de modificaciones
               que afectan la definición de software libre.
             </p>
           </blockquote>
@@ -257,7 +257,7 @@ require_once('inc/head.php');
                     hace que las libertades específicas sean adecuadas o no.</p>
                     <br><br>
                     <center>
-              <img src="static/img/bsd-chuck.png" class="chuc" />
+              <img src="static/img/bsd-chuck.png"/>
             </center>
                     <br><br><br><br>
               </div>
