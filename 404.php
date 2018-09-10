@@ -1,4 +1,6 @@
 <?php header ('HTTP/1.0 404 OMGWTFBBQ!!!1ONE');?>
+<!DOCTYPE html>
+<!-- OMAIGA! -->
 <html><head>
 <style>
     body {margin: 0px; font-family: sans-serif;}
@@ -13,6 +15,6 @@
     <main>
         <div class="omg">😱</div>
         <div class="text">¡Omaiga! ¡Esta página no existe!</div>
-        <div class="link"><a href="https://icanux.org">&laquo; De regreso a ICANUX</a>
+        <div class="link"><a href="https://icanux.org">&laquo; De regreso a ICANUX</a></div>
     </main>
 </body></html>
