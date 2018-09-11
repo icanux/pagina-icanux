@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<base href="<?=BASE_PATH?>" />
-	<title>Contact V6</title>
+	<title>Icanux</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="static/img/HELMI1.ico">
@@ -31,9 +31,8 @@
 </head>
 <body>
   <?php require_once ('inc/header.php');?>
-
-	<div class="container-contact100">
-		<div class="contact100-map" id="google_map" data-map-x="-14.0870448" data-map-y="-75.735238" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+	<div class="map-background">
+			<div class="container-contact100">
 
 		<button class="contact100-btn-show">
 			<i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -79,6 +78,8 @@
 
 		</div>
 	</div>
+	</div>
+
 
 
 
@@ -99,21 +100,9 @@
 <!--===============================================================================================-->
 	<script src="static/contact/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="static/contact/js/map-custom.js"></script>
-<!--===============================================================================================-->
+	
 	<script src="static/contact/js/main.js"></script>
 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
 <script type="text/javascript" src="static/js/efectos.js"></script>
   <script type="text/javascript" src="static/js/ed-grid.js"></script>
   <script type="text/javascript">
