@@ -19,12 +19,12 @@
     // preguntarle a @elmer-rl :-D
     ['^perfil/(?<id>.+?)/(?<nombre>.+?)$', 'user/usuario.php'],
 
-    
+
     ['^admin/$', 'admin/index.php'],
     ['^admin/(?<app>.?)$','admin/{app}.php'],
 
-    ['^contact/(<>.?+)$','contact/index.php'],
-    ['^contact/(<?file>.+?)$', 'contact/{file}'],
+    ['^contact/?$','contact/index.php'],
+    ['^contact/(?<file>.+?)$', 'contact/{file}'],
 
     // Si no existe ningún patrón de ruta especial, ubicamos un fichero
     // con el nombre de la ruta.
@@ -32,6 +32,6 @@
 
     // Este patrón es cuando la ruta está vacía, el equivalente a 'index.html'
     ['', 'inicio.php'],
-    
+
 
 ];
