@@ -6,26 +6,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="contact/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="static/contact/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="contact/css/util.css">
-	<link rel="stylesheet" type="text/css" href="contact/css/main.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/contact/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -87,24 +87,24 @@
 	<div id="dropDownSelect1"></div>
 
 <!--===============================================================================================-->
-	<script src="contact/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="static/contact/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="contact/vendor/animsition/js/animsition.min.js"></script>
+	<script src="static/contact/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="contact/vendor/bootstrap/js/popper.js"></script>
-	<script src="contact/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="static/contact/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/contact/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="contact/vendor/select2/select2.min.js"></script>
+	<script src="static/contact/vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="contact/vendor/daterangepicker/moment.min.js"></script>
-	<script src="contact/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="static/contact/vendor/daterangepicker/moment.min.js"></script>
+	<script src="static/contact/vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script src="contact/vendor/countdowntime/countdowntime.js"></script>
+	<script src="static/contact/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="contact/js/map-custom.js"></script>
+	<script src="static/contact/js/map-custom.js"></script>
 <!--===============================================================================================-->
-	<script src="contact/js/main.js"></script>
+	<script src="static/contact/js/main.js"></script>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
