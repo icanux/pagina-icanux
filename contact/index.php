@@ -5,8 +5,7 @@
 	<title>Contact V6</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="static/contact/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/x-icon" href="static/img/HELMI1.ico">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="static/contact/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -27,12 +26,14 @@
 	<link rel="stylesheet" type="text/css" href="static/contact/css/util.css">
 	<link rel="stylesheet" type="text/css" href="static/contact/css/main.css">
 <!--===============================================================================================-->
+	 <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+  	<link rel="stylesheet" type="text/css" href="static/css/my-style.css">
 </head>
 <body>
   <?php require_once ('inc/header.php');?>
 
 	<div class="container-contact100">
-		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+		<div class="contact100-map" id="google_map" data-map-x="-14.0870448" data-map-y="-75.735238" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
 
 		<button class="contact100-btn-show">
 			<i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -76,9 +77,6 @@
 				</div>
 			</form>
 
-			<span class="contact100-more">
-				For any question contact our 24/7 call center: <span class="contact100-more-highlight">+001 345 6889</span>
-			</span>
 		</div>
 	</div>
 
@@ -115,6 +113,11 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
+</script>
+<script type="text/javascript" src="static/js/efectos.js"></script>
+  <script type="text/javascript" src="static/js/ed-grid.js"></script>
+  <script type="text/javascript">
+edgrid.menu('nav','menu');
 </script>
 
 </body>
