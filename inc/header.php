@@ -87,7 +87,7 @@ if ($iduser) {
 <?php }?>
 <li>
 <?php if (!isset($_SESSION['iduser'])) {?>
-<a href="<?php echo $dato[0];?>contact/index.php">Conctactanos</a></li>
+<a href="<?php echo $dato[0];?>contact/">Contáctanos</a></li>
 <li>
 	<a class="event" href="https://eventos.icanux.org/">
 	Eventos
