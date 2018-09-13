@@ -87,7 +87,7 @@ require_once('inc/head.php');
           </div>
           <div class="main-title"><h2 class="sidebar-block__title">Objetivos</h2></div>
           <div class="valores">
-            promover y difundir el uso, desarrollo e investigación de Tecnología de la Información basados en Software Libre. Innovando el acceso a la educación, desarrollo e independencia tecnológica.
+            Promover y difundir el uso, desarrollo e investigación de Tecnología de la Información basados en Software Libre. Innovando el acceso a la educación, desarrollo e independencia tecnológica.
           </div>
         </div>
       </aside>
@@ -249,12 +249,10 @@ require_once('inc/head.php');
                     inusual; el software libre comercial es muy importante. Puede haber pagado
                     dinero para obtener copias de software libre, o puede haber obtenido copias
                     sin costo. Pero sin tener en cuenta cómo obtuvo sus copias, siempre tiene la
-                    libertad de copiar y modificar el software, incluso de <a
-                    href="https://www.gnu.org/philosophy/selling.html" target="_blank">vender copias</a>.
+                    libertad de copiar y modificar el software, incluso de vender copias.
                     </p>
 
-                    <p>En el resto de esta página tratamos algunos puntos que aclaran qué es lo que
-                    hace que las libertades específicas sean adecuadas o no.</p>
+                  
                     <br><br>
                     <center>
               <img src="static/img/bsd-chuck.png"/>
